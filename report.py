@@ -1351,7 +1351,7 @@ def main(argv):
     mail_msg += hdfsAdding_contents
     mail_msg += "<br>Hive/Impala 数据库以及表数据日增量统计</br>"
     mail_msg += report_table_adding
-    smallFiles = querySmallFiles("10.214.128.68", 'yuanbowen1', '523180',
+    smallFiles = querySmallFiles("xxx", 'xxx', 'xxx',
                                  "impala-shell -i xxx:21000 -l --auth_creds_ok_in_clear -u xxx --ldap_password_cmd=\"printf xxx\" -q \"select db_name,tbl_name,tbl_owner,support_person,table_location,storage_format,file_size_type,small_files_count from idc_infrastructure_db.hdfs_small_files_result order by small_files_count desc limit 20\";")
     mail_msg += "<br>Top20小文件数"
     mail_msg += smallFiles
